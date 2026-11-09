@@ -1,30 +1,36 @@
 # La Plaza · Fuengirola
 
-Sitio artesanal sin plantilla, HTML/CSS/JavaScript. No requiere instalar dependencias.
+Web artesanal en HTML, CSS y JavaScript, con identidad gráfica propia y tipografías locales Manrope y Barlow Condensed. No necesita instalar dependencias.
 
-## Vista local
+`npm run dev` inicia la vista local en http://127.0.0.1:4321.
 
-`npm run dev` sirve el sitio en http://127.0.0.1:4321.
+## Diseño y navegación
 
-## Contenido y funciones
+Cabecera persistente con logo y reservas en escritorio y móvil. Recorrido organizado: portada arquitectónica, presentación del local, carta fotográfica, bodega, galería, opiniones y contacto. Proporciones de imagen constantes, alineaciones compartidas y transiciones suaves que respetan la preferencia de movimiento reducido. Se eliminaron los collages escalonados, fotografías inclinadas y carruseles recortados.
 
-Carta oficial seleccionada sin precios inventados, reservas por teléfono/correo, ubicación Google Maps, galería filtrable y navegación de imágenes por teclado, cambio de luz en portada, animaciones adaptadas a movimiento reducido y diseño móvil.
+La carta filtra platos por categoría y abre un visor de detalle. La galería permite explorar las 80 imágenes y navegar por teclado. La portada alterna anochecer, terraza de día y barra. Las reservas utilizan el teléfono y correo reales del restaurante, sin simular una confirmación automática.
 
-Las imágenes son recreaciones con IA basadas en referencias reales de la terraza y barra del restaurante. Las personas, escenas e iluminación se recrean; el emplatado puede variar. No son fotografías documentales. Las referencias no permiten garantizar cada detalle arquitectónico.
+## Imágenes 4K
 
-## Resolución
+81 imágenes finales de **3840 × 2160 píxeles**: 80 de la colección y la portada arquitectónica. El sitio utiliza archivos WebP 4K y carga diferida en imágenes secundarias. `image-resolution-report.json` contiene dimensiones, tamaño, huella SHA-256 y procedimiento de cada archivo.
 
-Se solicitaron imágenes 4K al generador integrado; los archivos recibidos son de 1672×941 píxeles. No se presentan como 4K nativo. El sitio es adaptable a pantallas 4K, pero esto no aumenta la resolución de las fotografías. `image-resolution-report.json` registra las dimensiones verificadas. `originals/` conserva los PNG antes de compresión web.
+Las imágenes originales fueron generadas con IA a 1672 × 941 a partir de referencias reales de terraza y barra. Se mejoraron localmente con **Real-ESRGAN x4plus**, obteniendo 6688 × 3764, y se prepararon a 3840 × 2160. Son imágenes con superresolución por IA; no fotografías capturadas ni generadas nativamente en 4K. Los originales y los másteres JPEG se conservan fuera del paquete web en `originals/`.
+
+Las escenas, iluminación y presentación de platos son recreaciones editoriales. No sustituyen fotografías documentales ni garantizan cada detalle arquitectónico. La portada es una visualización arquitectónica rasterizada, no un modelo 3D interactivo. No se utilizaron fotografías de relleno ni texto de muestra.
+
+Motor de superresolución: https://github.com/xinntao/Real-ESRGAN y su distribución oficial NCNN/Vulkan. Las licencias de las tipografías se incluyen en `dist/fonts/`.
 
 ## Fuentes
 
 - https://www.barlaplazafuengirola.es/carta-de-comidas-y-tapas/
 - https://www.barlaplazafuengirola.es/contacto-y-reservas/
 - https://www.barlaplazafuengirola.es/carta-de-bebidas/
-- Perfil Google Maps aportado por el usuario (referencias fotográficas)
-- https://es.restaurantguru.com/La-Plaza-Fuengirola-2 (extractos de reseñas)
+- https://www.barlaplazafuengirola.es/carta-de-vinos/
+- Perfil Google Maps aportado por el usuario: referencias fotográficas del local.
+- https://es.restaurantguru.com/La-Plaza-Fuengirola-2 : extractos de opiniones atribuidas a Google.
 
-No existe sistema de reservas en servidor: la llamada o solicitud por correo requiere confirmación del restaurante. No se ha atribuido WhatsApp al teléfono fijo.
+Los vinos proceden de la carta oficial; no se atribuyen a menciones no verificadas en reseñas. Precios, añadas, alérgenos y disponibilidad deben consultarse al restaurante.
 
-Rediseño editorial: tipografía local Manrope y Barlow Condensed, portada arquitectónica nocturna generada con IA, carta fotográfica, ampliación de platos en móvil, recorrido horizontal gastronómico y bodega. Los botones usan iconos geométricos, sin emoticonos. La portada architecture-v2.jpg conserva resolución real1672×941; 4K pendiente de autorización de una vía alternativa.
+## Verificación
 
+`node verify.mjs` comprueba la colección y las referencias de imágenes del HTML. `node --check` valida los archivos JavaScript. `integrate-4k.mjs` verifica dimensiones de los 81 WebP antes de actualizar referencias. Las interacciones se revisaron en navegador en móvil, escritorio y viewport 4K.

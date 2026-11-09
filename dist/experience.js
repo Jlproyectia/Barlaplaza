@@ -1,16 +1,19 @@
 // Custom interactions for La Plaza. Motion follows the light, the menu and the visit.
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
 const heroImage=document.querySelector('.hero-image');
+let sceneRequest=0;
 document.querySelectorAll('[data-light]').forEach(button=>button.addEventListener('click',async()=>{
- const scenes={architecture:['assets/architecture-v2.jpg','Visualización arquitectónica de La Plaza al anochecer'],kitchen:['assets/venue-14.jpg','Langostinos al pil-pil en La Plaza'],terrace:['assets/venue-01.jpg','La terraza a plena luz'],bar:['assets/venue-02.jpg','La barra de La Plaza']};
+ const request=++sceneRequest;
+ const scenes={architecture:['assets/4k/architecture-v2.webp','Visualización arquitectónica de La Plaza al anochecer'],kitchen:['assets/4k/venue-14.webp','Langostinos al pil-pil en La Plaza'],terrace:['assets/4k/venue-01.webp','La terraza a plena luz'],bar:['assets/4k/venue-02.webp','La barra de La Plaza']};
  const [src,description]=scenes[button.dataset.light];
  const img=new Image();img.src=src;
  try{await img.decode()}catch{return;}
+ if(request!==sceneRequest)return;
+ heroImage.getAnimations().forEach(animation=>animation.cancel());
  document.querySelectorAll('[data-light]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
- if(!reduceMotion.matches)await heroImage.animate([{opacity:1},{opacity:.2}],{duration:220,fill:'forwards'}).finished;
  heroImage.src=src;
  heroImage.alt=description+', recreación con IA';document.querySelector('.hero-image-index').textContent=description.toUpperCase();
- if(!reduceMotion.matches)heroImage.animate([{opacity:.2},{opacity:1}],{duration:650,fill:'forwards'});
+ if(!reduceMotion.matches)heroImage.animate([{opacity:.45},{opacity:1}],{duration:550,easing:'ease-out'});
 }));
 
 const gallerySection=document.querySelector('#galeria');
@@ -45,7 +48,7 @@ function appendImages(){
  const stop=Math.min(visibleCount+12,filtered.length);
  for(let i=visibleCount;i<stop;i++){
   const item=filtered[i],button=document.createElement('button'),image=document.createElement('img'),caption=document.createElement('span');
-  button.className='collection-item';button.setAttribute('aria-label','Ampliar: '+item.title);image.src=item.src;image.alt=item.title;image.loading='lazy';image.width=1672;image.height=941;caption.textContent=item.title;
+  button.className='collection-item';button.setAttribute('aria-label','Ampliar: '+item.title);image.src=item.src;image.alt=item.title;image.loading='lazy';image.width=3840;image.height=2160;caption.textContent=item.title;
   button.append(image,caption);button.addEventListener('click',()=>openCatalogImage(i));collectionGrid.append(button);
  }
  visibleCount=stop;loadMore.hidden=visibleCount>=filtered.length;collectionStatus.textContent=`${visibleCount} de ${filtered.length} imágenes`;
@@ -63,15 +66,15 @@ browseButton.addEventListener('click',async()=>{
 });
 
 // Category-specific photography keeps the menu grounded in the restaurant setting.
-const categoryPhoto={compartir:['assets/venue-13.jpg','Tataki en una mesa de La Plaza'],principales:['assets/venue-29.jpg','Arroz en la terraza'],dulce:['assets/venue-39.jpg','El momento del postre'],copas:['assets/venue-43.jpg','Una copa en La Plaza']};
+const categoryPhoto={compartir:['assets/4k/venue-13.webp','Tataki en una mesa de La Plaza'],principales:['assets/4k/venue-29.webp','Arroz en la terraza'],dulce:['assets/4k/venue-39.webp','El momento del postre'],copas:['assets/4k/venue-43.webp','Una copa en La Plaza']};
 const dishIds={'Tataki de atún':13,'Cazuela de langostinos al pil-pil':14,'Berenjenas fritas con miel de caña':16,'Surtido de croquetas':15,'Tabla de jamón ibérico de bellota':37,'Surtido de quesos con denominación de origen':36,'Arroz con bogavante':17,'Arroz caldoso a la marinera':29,'Lubina':30,'Carrillada de cerdo ibérica al Pedro Ximénez':18,'Solomillo de ternera retinta a la parrilla':19,'Lomo del salmón al cava':31,'Tatín de manzana':39,'Coulant de chocolate':40,'Tarta de queso':41,'Brownie con helado de vainilla':42,'Fruta de temporada':27,'Helado tres sabores':28,'Mojito':43,'Margarita':44,'Piña colada':45,'Daiquiri':46,'Sangría':48,'Vinos':76};
 let dishRequest=0;
 window.addEventListener('dish-select',async event=>{
  const {name,row}=event.detail;const id=dishIds[name];if(!id)return;const request=++dishRequest;
- const src='assets/venue-'+String(id).padStart(2,'0')+'.jpg';const image=new Image();image.src=src;
+ const src='assets/4k/venue-'+String(id).padStart(2,'0')+'.webp';const image=new Image();image.src=src;
  try{await image.decode()}catch{return;}if(request!==dishRequest||!row.isConnected)return;
  document.querySelectorAll('.menu-item.selected').forEach(r=>{r.classList.remove('selected');r.querySelector('.dish-inline')?.remove();});
- row.classList.add('selected');image.className='dish-inline';image.alt=name+', recreación con IA';image.width=1672;image.height=941;row.append(image);
+ row.classList.add('selected');image.className='dish-inline';image.alt=name+', recreación con IA';image.width=3840;image.height=2160;row.append(image);
  const main=document.querySelector('.menu-photo-wrap img');main.src=src;main.alt=image.alt;main.hidden=false;
  document.querySelector('.menu-caption').textContent=name;
  if(!reduceMotion.matches)main.animate([{opacity:.2,transform:'scale(1.02)'},{opacity:1,transform:'scale(1)'}],{duration:600});
