@@ -14,3 +14,6 @@
 
 /* Compact captions: no imposed empty white space. */
 .dish span{min-height:0;padding:7px 26px 7px 10px;line-height:1.05}.dish-arrow{right:7px;width:14px;height:14px}@media(max-width:700px){.dish span{min-height:0;padding:6px 24px 6px 10px;font-size:19px;line-height:1.05}}
+
+/* Two-line titles with equal compact caption heights. */
+.dish span{height:56px;min-height:56px;flex:0 0 56px;padding:7px 26px 7px 10px}.dish-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font:inherit;line-height:1.05;max-height:2.1em}@media(max-width:700px){.dish span{height:52px;min-height:52px;flex:0 0 52px;padding:6px 24px 6px 10px;font-size:19px}}
