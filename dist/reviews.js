@@ -9,9 +9,11 @@
   const previous = section.querySelector('[data-review-prev]');
   const next = section.querySelector('[data-review-next]');
   let reviews = [], index = 0;
+  let moving = false;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   function render() {
     const review = reviews[index];
-    quote.textContent = review.text || 'Valoración sin comentario escrito.';
+    quote.textContent = review.text;
     quote.lang = review.language || 'es';
     author.textContent = review.author;
     author.href = review.authorUrl;
@@ -21,15 +23,37 @@
     counter.textContent = `${index + 1} / ${reviews.length}`;
     previous.disabled = next.disabled = reviews.length < 2;
   }
-  previous.addEventListener('click', () => { index = (index - 1 + reviews.length) % reviews.length; render(); });
-  next.addEventListener('click', () => { index = (index + 1) % reviews.length; render(); });
+  async function move(direction) {
+    if (moving || reviews.length < 2) return;
+    moving = true;
+    try {
+      if (!reducedMotion.matches) {
+        await figure.animate([
+          { opacity: 1, transform: 'translateY(0)' },
+          { opacity: 0, transform: 'translateY(-10px)' }
+        ], { duration: 300, easing: 'ease-in-out' }).finished;
+      }
+      index = (index + direction + reviews.length) % reviews.length;
+      render();
+      if (!reducedMotion.matches) {
+        await figure.animate([
+          { opacity: 0, transform: 'translateY(14px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 300, easing: 'ease-in-out' }).finished;
+      }
+    } finally {
+      moving = false;
+    }
+  }
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
   fetch('reviews.json').then(response => {
     if (!response.ok) throw Error('Reviews unavailable');
     return response.json();
   }).then(data => {
     const seen = new Set();
     reviews = data.reviews.filter(review => {
-      if (![4, 5].includes(review.rating) || !review.author || seen.has(review.id)) return false;
+      if (![4, 5].includes(review.rating) || !review.author || typeof review.text !== 'string' || !review.text.trim() || seen.has(review.id)) return false;
       seen.add(review.id);
       return true;
     });
