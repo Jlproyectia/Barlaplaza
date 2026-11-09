@@ -6,9 +6,9 @@ Web artesanal en HTML, CSS y JavaScript, con identidad gráfica propia y tipogra
 
 ## Diseño y navegación
 
-Cabecera persistente con logo y reservas en escritorio y móvil. Recorrido organizado: portada arquitectónica, presentación del local, carta fotográfica, bodega, galería, opiniones y contacto. Proporciones de imagen constantes, alineaciones compartidas y transiciones suaves que respetan la preferencia de movimiento reducido. Se eliminaron los collages escalonados, fotografías inclinadas y carruseles recortados.
+Cabecera persistente con logo y reservas en escritorio y móvil. Recorrido organizado: portada de la barra, presentación del local, carta fotográfica, bodega, galería, opiniones y contacto. Proporciones de imagen constantes, alineaciones compartidas y transiciones suaves que respetan la preferencia de movimiento reducido. Se eliminaron los collages escalonados, fotografías inclinadas y carruseles recortados.
 
-La carta filtra platos por categoría y abre un visor de detalle. La galería permite explorar las 80 imágenes y navegar por teclado. La portada alterna anochecer, terraza de día y barra. Las reservas utilizan el teléfono y correo reales del restaurante, sin simular una confirmación automática.
+La carta filtra platos por categoría y abre un visor de detalle. La galería permite explorar las 80 imágenes y navegar por teclado. La portada comienza con la barra 4K y permite alternar anochecer y terraza de día. Los botones utilizan acabado dorado satinado e iconos SVG. Cada una de las cinco botellas abre una ficha de exactamente 60 palabras, con su imagen, descripción y enlace a la bodega; la ficha también se abre desde la colección y la carta. Las reservas utilizan el teléfono y correo reales del restaurante, sin simular una confirmación automática.
 
 ## Imágenes 4K
 
