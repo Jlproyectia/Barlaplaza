@@ -4,7 +4,7 @@ const menu = {
     ['Cazuela de langostinos al pil-pil'],
     ['Berenjenas fritas con miel de caña'],
     ['Surtido de croquetas'],
-    ['Tabla de jamón ibérico de bellota', '110 g'],
+    ['Tabla de jamón ibérico de bellota'],
     ['Surtido de quesos con denominación de origen']
   ],
   principales: [
