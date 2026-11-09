@@ -25,3 +25,6 @@ Se solicitaron imágenes 4K al generador integrado; los archivos recibidos son d
 - https://es.restaurantguru.com/La-Plaza-Fuengirola-2 (extractos de reseñas)
 
 No existe sistema de reservas en servidor: la llamada o solicitud por correo requiere confirmación del restaurante. No se ha atribuido WhatsApp al teléfono fijo.
+
+Rediseño editorial: tipografía local Manrope y Barlow Condensed, portada arquitectónica nocturna generada con IA, carta fotográfica, ampliación de platos en móvil, recorrido horizontal gastronómico y bodega. Los botones usan iconos geométricos, sin emoticonos. La portada architecture-v2.jpg conserva resolución real1672×941; 4K pendiente de autorización de una vía alternativa.
+

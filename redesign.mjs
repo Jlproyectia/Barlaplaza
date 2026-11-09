@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+let html=fs.readFileSync('dist/index.html','utf8');
+html=html.replace('<link rel="stylesheet" href="styles.css">','<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="styles.css">').replace('<script src="app.js" defer>','<link rel="stylesheet" href="atelier.css"><script src="app.js" defer>');
+html=html.replace('<main id="contenido">','<main id="contenido"><div class="edition-line"><span>FUENGIROLA, MÁLAGA</span><span>COCINA · TERRAZA · SOBREMESA</span><span>36°32′ N / 4°37′ O</span></div><div class="masthead" aria-hidden="true">LA PLAZA<span>®</span></div>');
+html=html.replace('El gusto<br>de quedarse.','El sur.<br>A bocados.').replace('FUENGIROLA · PLAZA DE LA CONSTITUCIÓN</p><h1','01 / EL PRIMER ENCUENTRO</p><h1');
+html=html.replace('Tapas, cocina de siempre y platos para compartir. Todo sabe mejor alrededor de una buena mesa.','Una mesa en Fuengirola. Un plato en el centro. Y ninguna prisa por marcharse.');
+html=html.replace('<div class="hero-shade"></div>','<div class="hero-shade"></div><span class="hero-image-index">LA COCINA DE LA PLAZA<br>LANGOSTINOS AL PIL-PIL</span>');
+html=html.replace('Hay lugares a los que se va.<br><span>Y lugares en los que<br>uno se queda.</span>','La plaza pone<br>el escenario.<br><span>La mesa, todo<br>lo demás.</span>');
+html=html.replace('EL ARTE DE ESTAR A GUSTO','02 / EL LUGAR');
+html=html.replace('<div class="intro-bottom reveal">','<figure class="place-fragment"><img src="assets/venue-01.jpg" alt="Terraza de La Plaza, recreación con IA" loading="lazy"><figcaption>Plaza de la Constitución, 9 — Fuengirola</figcaption></figure><div class="intro-bottom reveal">');
+html=html.replace('A TU GUSTO, SIN PRISA','03 / LA CARTA').replace('El placer<br>de elegir.','Primero se mira.<br>Después se comparte.').replace('Del primer bocado a la última sobremesa.','Selecciona un plato. Acércate a sus detalles.');
+html=html.replace('Pequeños momentos.<br>Mucho que recordar.','Dentro.<br>Fuera.<br>Entre nosotros.');
+html=html.replace('<script src="experience.js" defer></script>','<script src="experience.js" defer></script><script src="atelier.js" defer></script>');
+html=html.replace('content="#303b2c"','content="#171916"');
+fs.writeFileSync('dist/index.html',html);
+let js=fs.readFileSync('dist/experience.js','utf8');
+// The old full-bleed interlude is replaced by an editorial tasting sequence.
+const a=js.indexOf('// A custom editorial sequence'), b=js.indexOf('// Category-specific photography');
+js=js.slice(0,a)+js.slice(b);
+fs.writeFileSync('dist/experience.js',js);
