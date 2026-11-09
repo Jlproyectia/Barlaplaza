@@ -12,14 +12,14 @@ document.querySelectorAll('[data-light]').forEach(button=>button.addEventListene
  heroImage.getAnimations().forEach(animation=>animation.cancel());
  document.querySelectorAll('[data-light]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
  heroImage.src=src;
- heroImage.alt=description+', recreación con IA';document.querySelector('.hero-image-index').textContent=description.toUpperCase();
+ heroImage.alt=description;document.querySelector('.hero-image-index').textContent=description.toUpperCase();
  if(!reduceMotion.matches)heroImage.animate([{opacity:.45},{opacity:1}],{duration:550,easing:'ease-out'});
 }));
 
 const gallerySection=document.querySelector('#galeria');
 const browseButton=document.createElement('button');browseButton.className='button button-outline browse-gallery';browseButton.textContent='Explorar La Plaza ↗';browseButton.setAttribute('aria-expanded','false');
 const collection=document.createElement('div');collection.className='collection';collection.hidden=true;collection.id='collection';browseButton.setAttribute('aria-controls','collection');
-const collectionIntro=document.createElement('p');collectionIntro.className='collection-intro';collectionIntro.textContent='Distintas horas. Distintas mesas. La misma plaza. Imágenes recreadas con IA a partir del local real.';
+const collectionIntro=document.createElement('p');collectionIntro.className='collection-intro';collectionIntro.textContent='Distintas horas. Distintas mesas. La misma plaza.';
 const collectionFilters=document.createElement('div');collectionFilters.className='collection-filters';collectionFilters.setAttribute('role','group');collectionFilters.setAttribute('aria-label','Filtrar imágenes');
 const collectionGrid=document.createElement('div');collectionGrid.className='collection-grid';
 const collectionStatus=document.createElement('p');collectionStatus.className='collection-status';collectionStatus.setAttribute('role','status');
@@ -31,7 +31,7 @@ function openCatalogImage(index){
  const item=filtered[index];
  activeCatalogIndex=index;
  const dialog=document.querySelector('#catalog-dialog');
- const img=dialog.querySelector('img');img.src=item.src;img.alt=item.title+', recreación con IA';
+ const img=dialog.querySelector('img');img.src=item.src;img.alt=item.title;
  dialog.querySelector('.catalog-caption').textContent=`${index+1} / ${filtered.length} · ${item.title}`;
  if(!dialog.open){dialog.showModal();document.body.style.overflow='hidden';}
 }
@@ -74,11 +74,11 @@ window.addEventListener('dish-select',async event=>{
  const src='assets/4k/venue-'+String(id).padStart(2,'0')+'.webp';const image=new Image();image.src=src;
  try{await image.decode()}catch{return;}if(request!==dishRequest||!row.isConnected)return;
  document.querySelectorAll('.menu-item.selected').forEach(r=>{r.classList.remove('selected');r.querySelector('.dish-inline')?.remove();});
- row.classList.add('selected');image.className='dish-inline';image.alt=name+', recreación con IA';image.width=3840;image.height=2160;row.append(image);
+ row.classList.add('selected');image.className='dish-inline';image.alt=name;image.width=3840;image.height=2160;row.append(image);
  const main=document.querySelector('.menu-photo-wrap img');main.src=src;main.alt=image.alt;main.hidden=false;
  document.querySelector('.menu-caption').textContent=name;
  if(!reduceMotion.matches)main.animate([{opacity:.2,transform:'scale(1.02)'},{opacity:1,transform:'scale(1)'}],{duration:600});
 });
-document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{const [src,alt]=categoryPhoto[b.dataset.category];const photo=document.querySelector('.menu-photo-wrap img');const next=new Image();next.src=src;next.onload=()=>{photo.src=src;photo.alt=alt+', recreación con IA';photo.hidden=false;photo.parentElement.querySelector('.photo-failure').hidden=true;};}));
+document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{const [src,alt]=categoryPhoto[b.dataset.category];const photo=document.querySelector('.menu-photo-wrap img');const next=new Image();next.src=src;next.onload=()=>{photo.src=src;photo.alt=alt;photo.hidden=false;photo.parentElement.querySelector('.photo-failure').hidden=true;};}));
 
 

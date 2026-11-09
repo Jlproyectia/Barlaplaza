@@ -1,12 +1,12 @@
 import fs from 'node:fs';
 let s=fs.readFileSync('dist/index.html','utf8');
 s=s.replace('LA PLAZA<span>®</span>','LA PLAZA<span>FUENGIROLA</span>');
-s=s.replace('class="hero-image" src="assets/venue-14.jpg" alt="Langostinos al pil-pil en la terraza de La Plaza, recreación con IA"','class="hero-image" src="assets/architecture-v2.jpg" alt="Visualización arquitectónica de La Plaza al anochecer, recreación con IA"');
+s=s.replace('class="hero-image" src="assets/venue-14.jpg" alt="Langostinos al pil-pil en la terraza de La Plaza"','class="hero-image" src="assets/architecture-v2.jpg" alt="Visualización arquitectónica de La Plaza al anochecer"');
 s=s.replace('LA COCINA DE LA PLAZA<br>LANGOSTINOS AL PIL-PIL','LA PLAZA AL ANOCHECER<br>VISUALIZACIÓN ARQUITECTÓNICA');
 s=s.replace('data-light="kitchen" aria-pressed="true">La cocina','data-light="architecture" aria-pressed="true">Anochecer');
 s=s.replace('data-light="terrace" aria-pressed="false">La terraza','data-light="terrace" aria-pressed="false">De día');
 fs.writeFileSync('dist/index.html',s);
 s=fs.readFileSync('dist/experience.js','utf8');
 s=s.replace('const scenes={kitchen:',"const scenes={architecture:['assets/architecture-v2.jpg','Visualización arquitectónica de La Plaza al anochecer'],kitchen:");
-s=s.replace("heroImage.alt=description+', recreación con IA';","heroImage.alt=description+', recreación con IA';document.querySelector('.hero-image-index').textContent=description.toUpperCase();");
+s=s.replace("heroImage.alt=description;","heroImage.alt=description;document.querySelector('.hero-image-index').textContent=description.toUpperCase();");
 fs.writeFileSync('dist/experience.js',s);

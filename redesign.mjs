@@ -7,7 +7,7 @@ html=html.replace('Tapas, cocina de siempre y platos para compartir. Todo sabe m
 html=html.replace('<div class="hero-shade"></div>','<div class="hero-shade"></div><span class="hero-image-index">LA COCINA DE LA PLAZA<br>LANGOSTINOS AL PIL-PIL</span>');
 html=html.replace('Hay lugares a los que se va.<br><span>Y lugares en los que<br>uno se queda.</span>','La plaza pone<br>el escenario.<br><span>La mesa, todo<br>lo demás.</span>');
 html=html.replace('EL ARTE DE ESTAR A GUSTO','02 / EL LUGAR');
-html=html.replace('<div class="intro-bottom reveal">','<figure class="place-fragment"><img src="assets/venue-01.jpg" alt="Terraza de La Plaza, recreación con IA" loading="lazy"><figcaption>Plaza de la Constitución, 9 — Fuengirola</figcaption></figure><div class="intro-bottom reveal">');
+html=html.replace('<div class="intro-bottom reveal">','<figure class="place-fragment"><img src="assets/venue-01.jpg" alt="Terraza de La Plaza" loading="lazy"><figcaption>Plaza de la Constitución, 9 — Fuengirola</figcaption></figure><div class="intro-bottom reveal">');
 html=html.replace('A TU GUSTO, SIN PRISA','03 / LA CARTA').replace('El placer<br>de elegir.','Primero se mira.<br>Después se comparte.').replace('Del primer bocado a la última sobremesa.','Selecciona un plato. Acércate a sus detalles.');
 html=html.replace('Pequeños momentos.<br>Mucho que recordar.','Dentro.<br>Fuera.<br>Entre nosotros.');
 html=html.replace('<script src="experience.js" defer></script>','<script src="experience.js" defer></script><script src="atelier.js" defer></script>');
