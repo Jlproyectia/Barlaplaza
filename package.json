@@ -1,0 +1,1 @@
+{"name":"la-plaza-editorial","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node serve.mjs","check":"node --check dist/app.js"}}

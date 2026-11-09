@@ -1,0 +1,562 @@
+[
+  {
+    "id": "01",
+    "title": "La terraza, a plena luz",
+    "category": "ambiente",
+    "src": "assets/venue-01.jpg",
+    "recreation": true
+  },
+  {
+    "id": "02",
+    "title": "La barra de La Plaza",
+    "category": "ambiente",
+    "src": "assets/venue-02.jpg",
+    "recreation": true
+  },
+  {
+    "id": "03",
+    "title": "La terraza, hora azul",
+    "category": "ambiente",
+    "src": "assets/venue-03.jpg",
+    "recreation": true
+  },
+  {
+    "id": "04",
+    "title": "Bajo las sombrillas",
+    "category": "ambiente",
+    "src": "assets/venue-04.jpg",
+    "recreation": true
+  },
+  {
+    "id": "05",
+    "title": "Perspectiva de la plaza",
+    "category": "ambiente",
+    "src": "assets/venue-05.jpg",
+    "recreation": true
+  },
+  {
+    "id": "06",
+    "title": "La mesa junto a la fachada",
+    "category": "ambiente",
+    "src": "assets/venue-06.jpg",
+    "recreation": true
+  },
+  {
+    "id": "07",
+    "title": "Ensalada de quinoa",
+    "category": "plato",
+    "src": "assets/venue-07.jpg",
+    "recreation": true
+  },
+  {
+    "id": "08",
+    "title": "Ensalada de pollo al curry",
+    "category": "plato",
+    "src": "assets/venue-08.jpg",
+    "recreation": true
+  },
+  {
+    "id": "09",
+    "title": "Huevos rotos con jamón",
+    "category": "plato",
+    "src": "assets/venue-09.jpg",
+    "recreation": true
+  },
+  {
+    "id": "10",
+    "title": "Huevos rotos con foie",
+    "category": "plato",
+    "src": "assets/venue-10.jpg",
+    "recreation": true
+  },
+  {
+    "id": "11",
+    "title": "Fideos tostados con calamar",
+    "category": "plato",
+    "src": "assets/venue-11.jpg",
+    "recreation": true
+  },
+  {
+    "id": "12",
+    "title": "Parrillada de verduras en milhojas",
+    "category": "plato",
+    "src": "assets/venue-12.jpg",
+    "recreation": true
+  },
+  {
+    "id": "13",
+    "title": "Tataki en la terraza",
+    "category": "plato",
+    "src": "assets/venue-13.jpg",
+    "recreation": true
+  },
+  {
+    "id": "14",
+    "title": "Langostinos al pil-pil",
+    "category": "plato",
+    "src": "assets/venue-14.jpg",
+    "recreation": true
+  },
+  {
+    "id": "15",
+    "title": "Croquetas para compartir",
+    "category": "plato",
+    "src": "assets/venue-15.jpg",
+    "recreation": true
+  },
+  {
+    "id": "16",
+    "title": "Berenjenas con miel",
+    "category": "plato",
+    "src": "assets/venue-16.jpg",
+    "recreation": true
+  },
+  {
+    "id": "17",
+    "title": "Arroz con bogavante",
+    "category": "plato",
+    "src": "assets/venue-17.jpg",
+    "recreation": true
+  },
+  {
+    "id": "18",
+    "title": "Carrillada al Pedro Ximénez",
+    "category": "plato",
+    "src": "assets/venue-18.jpg",
+    "recreation": true
+  },
+  {
+    "id": "19",
+    "title": "Ternera retinta",
+    "category": "plato",
+    "src": "assets/venue-19.jpg",
+    "recreation": true
+  },
+  {
+    "id": "20",
+    "title": "Ensalada en la plaza",
+    "category": "plato",
+    "src": "assets/venue-20.jpg",
+    "recreation": true
+  },
+  {
+    "id": "21",
+    "title": "Tabla de jamón ibérico de bellota",
+    "category": "plato",
+    "src": "assets/venue-21.jpg",
+    "recreation": true
+  },
+  {
+    "id": "22",
+    "title": "Surtido de quesos con denominación de origen",
+    "category": "plato",
+    "src": "assets/venue-22.jpg",
+    "recreation": true
+  },
+  {
+    "id": "23",
+    "title": "Bacalao a la vizcaína",
+    "category": "plato",
+    "src": "assets/venue-23.jpg",
+    "recreation": true
+  },
+  {
+    "id": "24",
+    "title": "Salmón al cava",
+    "category": "plato",
+    "src": "assets/venue-24.jpg",
+    "recreation": true
+  },
+  {
+    "id": "25",
+    "title": "Hamburguesa de gambas al pil-pil",
+    "category": "plato",
+    "src": "assets/venue-25.jpg",
+    "recreation": true
+  },
+  {
+    "id": "26",
+    "title": "Tatín de manzana",
+    "category": "postres",
+    "src": "assets/venue-26.jpg",
+    "recreation": true
+  },
+  {
+    "id": "27",
+    "title": "Fruta de temporada",
+    "category": "postres",
+    "src": "assets/venue-27.jpg",
+    "recreation": true
+  },
+  {
+    "id": "28",
+    "title": "Helado tres sabores",
+    "category": "postres",
+    "src": "assets/venue-28.jpg",
+    "recreation": true
+  },
+  {
+    "id": "29",
+    "title": "Arroz caldoso a la marinera",
+    "category": "cocina",
+    "src": "assets/venue-29.jpg",
+    "recreation": true
+  },
+  {
+    "id": "30",
+    "title": "Lubina",
+    "category": "cocina",
+    "src": "assets/venue-30.jpg",
+    "recreation": true
+  },
+  {
+    "id": "31",
+    "title": "Salmón al cava",
+    "category": "cocina",
+    "src": "assets/venue-31.jpg",
+    "recreation": true
+  },
+  {
+    "id": "32",
+    "title": "Bacalao a la Vizcaína",
+    "category": "cocina",
+    "src": "assets/venue-32.jpg",
+    "recreation": true
+  },
+  {
+    "id": "33",
+    "title": "Ternera retinta",
+    "category": "cocina",
+    "src": "assets/venue-33.jpg",
+    "recreation": true
+  },
+  {
+    "id": "34",
+    "title": "Pollo de corral",
+    "category": "cocina",
+    "src": "assets/venue-34.jpg",
+    "recreation": true
+  },
+  {
+    "id": "35",
+    "title": "Hamburguesa de ternera",
+    "category": "cocina",
+    "src": "assets/venue-35.jpg",
+    "recreation": true
+  },
+  {
+    "id": "36",
+    "title": "Quesos para compartir",
+    "category": "cocina",
+    "src": "assets/venue-36.jpg",
+    "recreation": true
+  },
+  {
+    "id": "37",
+    "title": "Jamón ibérico",
+    "category": "cocina",
+    "src": "assets/venue-37.jpg",
+    "recreation": true
+  },
+  {
+    "id": "38",
+    "title": "Surtido de croquetas",
+    "category": "cocina",
+    "src": "assets/venue-38.jpg",
+    "recreation": true
+  },
+  {
+    "id": "39",
+    "title": "Tatín de manzana",
+    "category": "postres",
+    "src": "assets/venue-39.jpg",
+    "recreation": true
+  },
+  {
+    "id": "40",
+    "title": "Coulant de chocolate",
+    "category": "postres",
+    "src": "assets/venue-40.jpg",
+    "recreation": true
+  },
+  {
+    "id": "41",
+    "title": "Tarta de queso",
+    "category": "postres",
+    "src": "assets/venue-41.jpg",
+    "recreation": true
+  },
+  {
+    "id": "42",
+    "title": "Brownie con helado",
+    "category": "postres",
+    "src": "assets/venue-42.jpg",
+    "recreation": true
+  },
+  {
+    "id": "43",
+    "title": "Mojito",
+    "category": "bebidas",
+    "src": "assets/venue-43.jpg",
+    "recreation": true
+  },
+  {
+    "id": "44",
+    "title": "Margarita",
+    "category": "bebidas",
+    "src": "assets/venue-44.jpg",
+    "recreation": true
+  },
+  {
+    "id": "45",
+    "title": "Piña colada",
+    "category": "bebidas",
+    "src": "assets/venue-45.jpg",
+    "recreation": true
+  },
+  {
+    "id": "46",
+    "title": "Daiquiri",
+    "category": "bebidas",
+    "src": "assets/venue-46.jpg",
+    "recreation": true
+  },
+  {
+    "id": "47",
+    "title": "Mimosa",
+    "category": "bebidas",
+    "src": "assets/venue-47.jpg",
+    "recreation": true
+  },
+  {
+    "id": "48",
+    "title": "Sangría",
+    "category": "bebidas",
+    "src": "assets/venue-48.jpg",
+    "recreation": true
+  },
+  {
+    "id": "49",
+    "title": "Tinto de verano",
+    "category": "bebidas",
+    "src": "assets/venue-49.jpg",
+    "recreation": true
+  },
+  {
+    "id": "50",
+    "title": "Vino tinto",
+    "category": "bebidas",
+    "src": "assets/venue-50.jpg",
+    "recreation": true
+  },
+  {
+    "id": "51",
+    "title": "Vino blanco",
+    "category": "bebidas",
+    "src": "assets/venue-51.jpg",
+    "recreation": true
+  },
+  {
+    "id": "52",
+    "title": "Cerveza",
+    "category": "bebidas",
+    "src": "assets/venue-52.jpg",
+    "recreation": true
+  },
+  {
+    "id": "53",
+    "title": "Café",
+    "category": "bebidas",
+    "src": "assets/venue-53.jpg",
+    "recreation": true
+  },
+  {
+    "id": "54",
+    "title": "Zumo de naranja",
+    "category": "bebidas",
+    "src": "assets/venue-54.jpg",
+    "recreation": true
+  },
+  {
+    "id": "55",
+    "title": "Tataki en la terraza",
+    "category": "cocina",
+    "src": "assets/venue-55.jpg",
+    "recreation": true
+  },
+  {
+    "id": "56",
+    "title": "Pil-pil junto a la plaza",
+    "category": "cocina",
+    "src": "assets/venue-56.jpg",
+    "recreation": true
+  },
+  {
+    "id": "57",
+    "title": "Croquetas en la barra",
+    "category": "cocina",
+    "src": "assets/venue-57.jpg",
+    "recreation": true
+  },
+  {
+    "id": "58",
+    "title": "Arroz para compartir",
+    "category": "cocina",
+    "src": "assets/venue-58.jpg",
+    "recreation": true
+  },
+  {
+    "id": "59",
+    "title": "Un final dulce",
+    "category": "cocina",
+    "src": "assets/venue-59.jpg",
+    "recreation": true
+  },
+  {
+    "id": "60",
+    "title": "Mojito en La Plaza",
+    "category": "bebidas",
+    "src": "assets/venue-60.jpg",
+    "recreation": true
+  },
+  {
+    "id": "61",
+    "title": "Una copa de vino",
+    "category": "bebidas",
+    "src": "assets/venue-61.jpg",
+    "recreation": true
+  },
+  {
+    "id": "62",
+    "title": "Café en la terraza",
+    "category": "bebidas",
+    "src": "assets/venue-62.jpg",
+    "recreation": true
+  },
+  {
+    "id": "63",
+    "title": "Sangría para dos",
+    "category": "bebidas",
+    "src": "assets/venue-63.jpg",
+    "recreation": true
+  },
+  {
+    "id": "64",
+    "title": "La hora del aperitivo",
+    "category": "bebidas",
+    "src": "assets/venue-64.jpg",
+    "recreation": true
+  },
+  {
+    "id": "65",
+    "title": "Bajo las sombrillas",
+    "category": "ambiente",
+    "src": "assets/venue-65.jpg",
+    "recreation": true
+  },
+  {
+    "id": "66",
+    "title": "Una mesa preparada",
+    "category": "ambiente",
+    "src": "assets/venue-66.jpg",
+    "recreation": true
+  },
+  {
+    "id": "67",
+    "title": "Luz entre las copas",
+    "category": "ambiente",
+    "src": "assets/venue-67.jpg",
+    "recreation": true
+  },
+  {
+    "id": "68",
+    "title": "Madera y luz",
+    "category": "ambiente",
+    "src": "assets/venue-68.jpg",
+    "recreation": true
+  },
+  {
+    "id": "69",
+    "title": "Sobremesa en la plaza",
+    "category": "vida",
+    "src": "assets/venue-69.jpg",
+    "recreation": true
+  },
+  {
+    "id": "70",
+    "title": "Un brindis en la terraza",
+    "category": "vida",
+    "src": "assets/venue-70.jpg",
+    "recreation": true
+  },
+  {
+    "id": "71",
+    "title": "Ensalada rusa",
+    "category": "plato",
+    "src": "assets/venue-71.jpg",
+    "recreation": true
+  },
+  {
+    "id": "72",
+    "title": "Saquitos de morcilla",
+    "category": "plato",
+    "src": "assets/venue-72.jpg",
+    "recreation": true
+  },
+  {
+    "id": "73",
+    "title": "Atún en manteca",
+    "category": "plato",
+    "src": "assets/venue-73.jpg",
+    "recreation": true
+  },
+  {
+    "id": "74",
+    "title": "Fetuccine a la carbonara",
+    "category": "plato",
+    "src": "assets/venue-74.jpg",
+    "recreation": true
+  },
+  {
+    "id": "75",
+    "title": "Brownie con helado de vainilla",
+    "category": "postres",
+    "src": "assets/venue-75.jpg",
+    "recreation": true
+  },
+  {
+    "id": "76",
+    "title": "Pago de Carraovejas",
+    "category": "vinos",
+    "src": "assets/venue-76.jpg",
+    "recreation": true
+  },
+  {
+    "id": "77",
+    "title": "Vega Sicilia Valbuena 5º",
+    "category": "vinos",
+    "src": "assets/venue-77.jpg",
+    "recreation": true
+  },
+  {
+    "id": "78",
+    "title": "Marqués de Riscal Reserva",
+    "category": "vinos",
+    "src": "assets/venue-78.jpg",
+    "recreation": true
+  },
+  {
+    "id": "79",
+    "title": "Matarromera",
+    "category": "vinos",
+    "src": "assets/venue-79.jpg",
+    "recreation": true
+  },
+  {
+    "id": "80",
+    "title": "Habla del Silencio",
+    "category": "vinos",
+    "src": "assets/venue-80.jpg",
+    "recreation": true
+  }
+]
