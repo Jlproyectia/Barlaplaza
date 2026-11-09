@@ -65,20 +65,3 @@ browseButton.addEventListener('click',async()=>{
  }catch{collectionStatus.textContent='No se ha podido abrir la colección. Cierra y vuelve a intentarlo.';}
 });
 
-// Category-specific photography keeps the menu grounded in the restaurant setting.
-const categoryPhoto={compartir:['assets/4k/venue-13.webp','Tataki en una mesa de La Plaza'],principales:['assets/4k/venue-29.webp','Arroz en la terraza'],dulce:['assets/4k/venue-39.webp','El momento del postre'],copas:['assets/4k/venue-43.webp','Una copa en La Plaza']};
-const dishIds={'Tataki de atún':13,'Cazuela de langostinos al pil-pil':14,'Berenjenas fritas con miel de caña':16,'Surtido de croquetas':15,'Tabla de jamón ibérico de bellota':37,'Surtido de quesos con denominación de origen':36,'Arroz con bogavante':17,'Arroz caldoso a la marinera':29,'Lubina':30,'Carrillada de cerdo ibérica al Pedro Ximénez':18,'Solomillo de ternera retinta a la parrilla':19,'Lomo del salmón al cava':31,'Tatín de manzana':39,'Coulant de chocolate':40,'Tarta de queso':41,'Brownie con helado de vainilla':42,'Fruta de temporada':27,'Helado tres sabores':28,'Mojito':43,'Margarita':44,'Piña colada':45,'Daiquiri':46,'Sangría':48,'Vinos':76};
-let dishRequest=0;
-window.addEventListener('dish-select',async event=>{
- const {name,row}=event.detail;const id=dishIds[name];if(!id)return;const request=++dishRequest;
- const src='assets/4k/venue-'+String(id).padStart(2,'0')+'.webp';const image=new Image();image.src=src;
- try{await image.decode()}catch{return;}if(request!==dishRequest||!row.isConnected)return;
- document.querySelectorAll('.menu-item.selected').forEach(r=>{r.classList.remove('selected');r.querySelector('.dish-inline')?.remove();});
- row.classList.add('selected');image.className='dish-inline';image.alt=name;image.width=3840;image.height=2160;row.append(image);
- const main=document.querySelector('.menu-photo-wrap img');main.src=src;main.alt=image.alt;main.hidden=false;
- document.querySelector('.menu-caption').textContent=name;
- if(!reduceMotion.matches)main.animate([{opacity:.2,transform:'scale(1.02)'},{opacity:1,transform:'scale(1)'}],{duration:600});
-});
-document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{const [src,alt]=categoryPhoto[b.dataset.category];const photo=document.querySelector('.menu-photo-wrap img');const next=new Image();next.src=src;next.onload=()=>{photo.src=src;photo.alt=alt;photo.hidden=false;photo.parentElement.querySelector('.photo-failure').hidden=true;};}));
-
-
