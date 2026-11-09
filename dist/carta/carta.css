@@ -5,3 +5,6 @@
 
 /* Landscape photographs fill their cards without letterboxing. */
 .dish img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}.dish span{gap:8px;padding:16px 12px;min-height:90px}.dish-arrow{width:18px;height:18px;flex:0 0 18px;color:#420905}@media(max-width:700px){.dish img{height:auto;aspect-ratio:16/9;object-fit:cover}.dish span{font-size:21px;min-height:90px}}
+
+/* Photo-led cards with compact, readable captions. */
+#dishes{align-items:start}.dish{position:relative}.dish img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 68%}.dish span{position:relative;display:block;flex:none;width:100%;min-height:0;padding:12px 33px 13px 12px;font-size:22px;line-height:1.12}.dish-arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:16px;height:16px}@media(max-width:700px){#dishes{gap:14px 12px}.dish img{height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 68%}.dish span{min-height:0;padding:11px 29px 12px 11px;font-size:20px;line-height:1.12}.dish-arrow{right:8px;width:15px;height:15px}}
