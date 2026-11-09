@@ -4,7 +4,7 @@
   const quote = figure.querySelector('blockquote');
   const author = figure.querySelector('.review-author');
   const stars = figure.querySelector('.review-stars');
-  const note = figure.querySelector('.review-note');
+  const businessUrl = 'https://www.google.com/maps/place/Bar+Restaurante+La+Plaza/@36.5385899,-4.6257501,17z/data=!4m8!3m7!1s0xd72e26b222448e7:0x45d46a4cb2bb097!8m2!3d36.5385899!4d-4.6231752!9m1!1b1!16s%2Fg%2F11_dz4v6l';
   const counter = section.querySelector('.review-counter');
   const previous = section.querySelector('[data-review-prev]');
   const next = section.querySelector('[data-review-next]');
@@ -16,10 +16,14 @@
     quote.textContent = review.text;
     quote.lang = review.language || 'es';
     author.textContent = review.author;
-    author.href = review.authorUrl;
+    const arrow = document.createElement('span');
+    arrow.textContent = '↗';
+    arrow.setAttribute('aria-hidden', 'true');
+    author.append(arrow);
+    author.href = businessUrl;
+    author.setAttribute('aria-label', `${review.author} · Ver La Plaza en Google Maps`);
     stars.textContent = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
     stars.setAttribute('aria-label', `${review.rating} de 5 estrellas`);
-    note.textContent = `${review.text ? 'Extracto de reseña' : 'Valoración'} en Google${review.translated ? ' · Traducción de Google' : ''}`;
     counter.textContent = `${index + 1} / ${reviews.length}`;
     previous.disabled = next.disabled = reviews.length < 2;
   }
